@@ -2,14 +2,21 @@
 
 /* Mirror
 
+  This program returns a reflection of the word
+
   Data In:
 
+  Resives a word as input
 
   Data Out:
 
+  Return two words:
+  first: source word
+  second: revert source word
 
   Test Cases:
 
+  hello => elleh | hello
 
 */
 

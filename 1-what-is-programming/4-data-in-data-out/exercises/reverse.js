@@ -2,14 +2,28 @@
 
 /* Reverse
 
+  This programme returns the inverted source text
+
   Data In:
 
+  Gets a value on the input.
+  It does not do any checking.
+  This can be either an empty value or a single value or sentence.
 
   Data Out:
 
+  The return value depends on the input value.
+  If value is empty, an empty value is returned.
+  If value is one word, one word is returned.
+  If the value is text, it returns returns the inverted source text.
 
   Test Cases:
 
+  All checked completed. => All checked completed. -> .detelpmoc dekcehc llA
+
+  world => world -> dlrow
+
+  => ->
 
 */
 

@@ -2,13 +2,21 @@
 
 /* Flip Five
 
+the program takes a five-character word and returns an inverted word  
+
   Data In:
 
+Gets the word and checks it
 
   Data Out:
 
+If the word is 5 characters long, return the reverse word.
 
-  Test Cases:
+Otherwise a warning is returned.
+
+
+
+  Test Cases: hello => olleh
 
 
 */
