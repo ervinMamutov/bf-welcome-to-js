@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.guides.indentation": true
 }
