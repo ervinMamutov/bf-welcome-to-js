@@ -1,12 +1,12 @@
 'use strict';
 
-__;
+let first = 'JavaScript';
 console.log(first);
 
-__;
+let last = 'C';
 console.log(last);
 
-__;
+let language = 'My favorite language' ;
 console.log(language);
 
-console.log(___);
+console.log(`${language} ${first} & ${last}`);
