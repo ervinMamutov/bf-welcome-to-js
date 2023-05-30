@@ -17,14 +17,12 @@ whenFormDataChanges('search-input', () => {
 
   let caseSensitive = readBoolean('sensitive');
   let caseCapital = readBoolean('capital');
-  let caseMiddle = readBoolean('middle');
-
+  
   // --- do the search ---
 
   let doesExist = false;
   let doesExistCapitall = false;
-  let doesExistMiddle = false;
-
+  
   if (caseSensitive) {
     doesExist = searchThis.includes(findThis);
   } else {
@@ -41,10 +39,6 @@ whenFormDataChanges('search-input', () => {
     doesExistCapitall = bigSearchThis.includes(bigFindThis);
   }
 
-  if (caseMiddle) {
-
-  }
-
   // --- create the message ---
 
   let message = '';
@@ -56,9 +50,9 @@ whenFormDataChanges('search-input', () => {
   }
 
   if (doesExistCapitall) {
-    message = 'yes';
-  } else {
     message = 'no';
+  } else {
+    message = 'yes';
   }
 
   // --- display the search results ---

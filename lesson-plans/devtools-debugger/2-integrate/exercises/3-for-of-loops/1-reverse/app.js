@@ -13,9 +13,9 @@ whenFormDataChanges('reversify', () => {
   // --- read user input ---
 
   let text = readString('to-reverse');
-  let screaming = readBoolean('loud');
+  /* let screaming = readBoolean('loud'); */
 
-  console.log(text, screaming);
+  /* console.log(text, screaming); */
 
   // --- reverse the string input ---
 
@@ -29,15 +29,33 @@ whenFormDataChanges('reversify', () => {
   // --- set to upper or lower case ---
 
   let finalText = '';
+  /*
   if (screaming) {
     finalText = reversed.toUpperCase();
   } else {
     finalText = reversed.toLowerCase();
-  }
+  } 
 
-  console.log(finalText);
+  console.log(finalText); 
+  */
 
   // --- display the final text ---
+
+  let uniqueText = '';
+  for (const char of reversed) {
+    if (!uniqueText.includes(char)) {
+      uniqueText += char;
+    }
+  }
+  /*  reversed = uniqueText; */
+
+  if (uniqueText.length < 4) {
+    finalText = uniqueText.toLowerCase();
+  } else if (uniqueText.length < 7) {
+    finalText = uniqueText;
+  } else if (uniqueText.length >= 7) {
+    finalText = uniqueText.toUpperCase();
+  }
 
   // display the final text to the <pre> with id "out"
   displayString('out', finalText);
