@@ -1,33 +1,28 @@
-
-
 'use strict';
 
 console.log('--- in execution phase ---');
 
-
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected token '{'
 
-  location:
+  location:27
 
-  life cycle:
+  life cycle:execution
 
-  the mistake:
+  the mistake: using else two times
 
-  the fix(es):
+  the fix(es):using else if instead of else
 */
 
 let userName = 'indrogo';
 
 if (userName.length < 3) {
   console.log('too short');
-} else (userName.length < 5) {
+} else if (userName.length < 5) {
   console.log('just right');
 } else {
   console.log('too long');
 }
-
-

@@ -3,28 +3,28 @@
 console.log('--- in execution phase ---');
 
 /*
-  environment:
+  environment:chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: VM251:24 Uncaught ReferenceError: Cannot access 'isValidUserName' before initialization
 
-  location:
+  location: 24
 
-  life cycle:
+  life cycle:execution
 
-  the mistake:
-
-  the fix(es):
+  the mistake:  Accessing is variable before initialisation
+  
+  the fix(es): Drclaring a variable before accessing it
 */
 
 const userName = 'chiobin';
 console.log('userName:', typeof userName, userName);
 
+let isValidUserName;
+
 if (userName.length > 3) {
   isValidUserName = true;
 }
-
-let isValidUserName;
 
 if (userName.length <= 3) {
   isValidUserName = false;
