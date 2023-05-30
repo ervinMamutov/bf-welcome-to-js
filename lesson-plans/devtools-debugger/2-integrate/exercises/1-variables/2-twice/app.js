@@ -16,13 +16,15 @@ whenFormDataChanges('user-data', () => {
   let text = readString('to-double');
 
   // --- repeat the text ---
+  for (let i = 1; i < 5; i++) {
+    let repeated = i + '. ' + text + '\n' + i + '. ' + text;
+    let doubledInput = `doubled-input-${i}`;
 
-  let repeated = text + '\n' + text;
+    // --- display the repeated text ---
 
-  // --- display the repeated text ---
-
-  // display a string to the <pre> with id "doubled-input"
-  displayString('doubled-input', repeated);
+    // display a string to the <pre> with id "doubled-input"
+    displayString(`${doubledInput}`, repeated);
+  }
 });
 
 /*  ===== Challenges =====

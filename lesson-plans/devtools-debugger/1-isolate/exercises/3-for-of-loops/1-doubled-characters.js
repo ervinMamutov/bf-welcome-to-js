@@ -7,10 +7,11 @@ while (text === null) {
 
 let doubled = '';
 for (let nextChar of text) {
-  doubled = doubled + nextChar + nextChar;
+  doubled = doubled + nextChar + '-' + nextChar + '-';
 }
 
-alert(doubled);
+alert(`variant 1: ${doubled}`);
+alert(`variant 2: ${doubled.slice(0, -1)}`);
 
 /*  ===== Challenges =====
   - Add an hyphen after each character.
