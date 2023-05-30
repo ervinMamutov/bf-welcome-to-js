@@ -16,10 +16,14 @@ whenFormDataChanges('search-input', () => {
   let findThis = readString('query');
 
   let caseSensitive = readBoolean('sensitive');
+  let caseCapital = readBoolean('capital');
+  let caseMiddle = readBoolean('middle');
 
   // --- do the search ---
 
   let doesExist = false;
+  let doesExistCapitall = false;
+  let doesExistMiddle = false;
 
   if (caseSensitive) {
     doesExist = searchThis.includes(findThis);
@@ -29,11 +33,29 @@ whenFormDataChanges('search-input', () => {
     doesExist = smallSearchThis.includes(smallFindThis);
   }
 
+  if (caseCapital) {
+    doesExistCapitall = searchThis.includes(findThis);
+  } else {
+    let bigSearchThis = searchThis.slice(0, 1).toUpperCase();
+    let bigFindThis = findThis.slice(0, 1).toUpperCase();
+    doesExistCapitall = bigSearchThis.includes(bigFindThis);
+  }
+
+  if (caseMiddle) {
+
+  }
+
   // --- create the message ---
 
   let message = '';
 
   if (doesExist) {
+    message = 'yes';
+  } else {
+    message = 'no';
+  }
+
+  if (doesExistCapitall) {
     message = 'yes';
   } else {
     message = 'no';

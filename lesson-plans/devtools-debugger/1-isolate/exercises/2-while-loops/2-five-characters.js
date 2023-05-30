@@ -13,3 +13,16 @@ alert(message);
   - Change the condition to 10 characters.
   - Make the user write "everything" in 2 steps.
 */
+
+let newInput = null;
+while (newInput === null) {
+  newInput = prompt('NEXT LEVEL: enter something with 10 characters:');
+}
+
+while (newInput !== 'everythig') {
+  newInput = prompt('FINAL LEVEL: enter "everythig"');
+}
+
+let newMessage = 'GREATE! /nThank you!';
+
+alert(newMessage);

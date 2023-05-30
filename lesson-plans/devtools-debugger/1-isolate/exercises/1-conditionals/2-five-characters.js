@@ -1,6 +1,6 @@
 'use strict';
 
-let input = prompt('enter something with 5 characters:');
+/* let input = prompt('enter something with 5 characters:');
 
 let message = '';
 if (input === null) {
@@ -13,10 +13,20 @@ if (input === null) {
   message = 'too long';
 }
 
-alert(message);
+alert(message); */
 
 /*  ===== Challenges =====
   - Give "input" a default value before asking for the user input.
   - Change input's value after asking for the user input so that we always show "thank you!".
   - Add one more conditional so that we never show ":(" and don't always show "thank you!".
 */
+
+let input = 'Good day';
+
+input = prompt('How are you?');
+
+alert('Thank you');
+
+input = prompt('Are you sure?');
+
+alert('Perfect');
