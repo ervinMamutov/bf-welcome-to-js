@@ -3,20 +3,20 @@
 console.log('--- in execution phase ---');
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: Uncaught ReferenceError: welf is not defined
 
-  location:
+  location: 20
 
-  life cycle:
+  life cycle:execution
 
-  the mistake:
+  the mistake: Not declared a local variable const or let
 
-  the fix(es):
+  the fix(es): Declared a local variable const
 */
 
-welf = 'ingrad';
+const welf = 'ingrad';
 
 console.log(welf);

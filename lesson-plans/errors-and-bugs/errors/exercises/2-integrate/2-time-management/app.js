@@ -5,18 +5,18 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: DisplayString is not defined
 
-  location:
+  location: 47
 
-  life cycle:
+  life cycle:execution
 
-  the mistake:
+  the mistake: wrong function name
 
-  the fix(es):
+  the fix(es): correct the function mame
 */
 
 whenFormDataChanges('sleep-info', () => {
@@ -43,5 +43,5 @@ whenFormDataChanges('sleep-info', () => {
 
   // --- display the advice ---
 
-  DisplayString('advice-area', advice);
+  displayString('advice-area', advice);
 });

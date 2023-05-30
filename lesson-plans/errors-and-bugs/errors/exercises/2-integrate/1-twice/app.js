@@ -6,18 +6,18 @@ import {
 } from '../../../../../../../lib/dom-io/index.js';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected token '+'
 
-  location:
+  location: 33
 
-  life cycle:
+  life cycle: creation 
 
-  the mistake:
+  the mistake: incorrectle assigned variable value
 
-  the fix(es):
+  the fix(es): replace + by =
 */
 
 whenFormDataChanges('user-data', () => {
@@ -29,7 +29,7 @@ whenFormDataChanges('user-data', () => {
 
   // --- repeat the text ---
 
-  let repeated + text + '\n' + text;
+  let repeated = text + '\n' + text;
 
   // --- display the repeated text ---
 
