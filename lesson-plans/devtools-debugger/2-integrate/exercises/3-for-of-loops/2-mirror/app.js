@@ -2,6 +2,7 @@ import {
   whenFormDataChanges,
   readString,
   displayString,
+  readBoolean,
 } from '../../../../../../lib/dom-io/index.js';
 
 whenFormDataChanges('input', () => {
@@ -12,17 +13,30 @@ whenFormDataChanges('input', () => {
   // --- read the user's input ---
 
   let userText = readString('to-mirror');
+  let middleCharacter = readString('middle-character');
+  let checkUpperCase = readBoolean('loud-upper');
+  let checkLowerCase = readBoolean('loud-lower');
 
   // --- mirror the text ---
 
-  let mirrored = ' | ';
+  let mirrored = ' ' + middleCharacter + ' ';
   for (let char of userText) {
     mirrored = char + mirrored + char;
   }
 
   // --- display the result ---
 
-  displayString('output', mirrored);
+  let finalText = '';
+
+  if (checkUpperCase) {
+    finalText = mirrored.toUpperCase();
+  } else if (checkLowerCase) {
+    finalText = mirrored.toLowerCase();
+  } else {
+    finalText = mirrored;
+  }
+
+  displayString('output', finalText);
 });
 
 /*  ===== Challenges =====
