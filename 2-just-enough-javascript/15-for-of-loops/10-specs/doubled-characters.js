@@ -24,17 +24,39 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input = null;
+const exception = ' 1234567890`~!@#$%^&*()_+-=<>,./?| ';
+
+while (!input) {
+  input = prompt('input text');
+  if (input === null) {
+    alert('do not press "cancel"');
+    continue;
+  }
+
+  if (input === '') {
+    alert('do not input empty string');
+    continue;
+  }
+
+  for (const character of input) {
+    if (exception.indexOf(character) != -1) {
+      alert('the entry letter should consist of the letters ');
+      input = null;
+    }
+    break;
+  }
+}
 console.log('input:', input);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (let character of input) {
+  output += character + character;
 }
 
 console.log('output:', output);

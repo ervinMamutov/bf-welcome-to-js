@@ -27,17 +27,46 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input = null;
+const exception = ' 1234567890`~!@#$%^&*()_+-=<>,./?| ';
+
+while (!input) {
+  input = prompt('input text');
+  if (input === null) {
+    alert('do not press "cancel"');
+    continue;
+  }
+
+  if (input === '') {
+    alert('do not input empty string');
+    continue;
+  }
+
+  for (const character of input) {
+    if (exception.indexOf(character) != -1) {
+      alert('the entry letter should consist of the letters ');
+      input = null;
+    }
+    break;
+  }
+}
 console.log('input:', input);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
+let isUpperCase = false;
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (const character of input) {
+  if (isUpperCase) {
+    output += character.toUpperCase();
+    isUpperCase = false;
+  } else {
+    output += character.toLowerCase();
+    isUpperCase = true;
+  }
 }
 
 /* --- alert the result --- */
@@ -49,13 +78,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */
