@@ -2,7 +2,17 @@
 
 'use strict';
 
-let animal = 'dog';
+const animals = [
+  'dog',
+  'cat',
+  'horse',
+  'fish',
+  'whale',
+  'elephant',
+  'snake',
+  'dove',
+];
+
 // let animal = 'cat';
 // let animal = 'horse';
 // let animal = 'fish';
@@ -12,8 +22,12 @@ let animal = 'dog';
 // let animal = 'dove';
 
 let doubled = '';
-for (let character of animal) {
-  doubled = doubled + character + character;
-}
+for (const animal of animals) {
+  for (const character of animal) {
+    doubled = doubled + character + character;
+  }
 
-console.log(animal + ' -> ' + doubled);
+  console.log(animal + ' -> ' + doubled);
+
+  doubled = '';
+}
