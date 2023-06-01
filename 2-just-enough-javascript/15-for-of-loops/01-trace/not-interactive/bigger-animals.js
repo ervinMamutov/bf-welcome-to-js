@@ -2,7 +2,9 @@
 
 'use strict';
 
-let animal = 'dog';
+const animals =
+  ['dog', 'cat', 'horse', 'fish', 'whale', 'elephant', 'snake', 'dove'];
+
 // let animal = 'cat';
 // let animal = 'horse';
 // let animal = 'fish';
@@ -11,10 +13,10 @@ let animal = 'dog';
 // let animal = 'snake';
 // let animal = 'dove';
 
-let bigAnimal = '';
-for (let letter of animal) {
-  let upperCase = letter.toUpperCase();
-  bigAnimal = bigAnimal + upperCase;
+/* let bigAnimal = ''; */
+for (const animal of animals) {
+  let upperCase = animal.toUpperCase();
+  console.log(upperCase);
 }
 
-console.log(bigAnimal);
+/* console.log(bigAnimal); */

@@ -2,7 +2,17 @@
 
 'use strict';
 
-let animal = 'dog';
+let animals = [
+  'dog',
+  'cat',
+  'horse',
+  'fish',
+  'whale',
+  'elephant',
+  'snake',
+  'dove',
+];
+
 // let animal = 'cat';
 // let animal = 'horse';
 // let animal = 'fish';
@@ -11,6 +21,12 @@ let animal = 'dog';
 // let animal = 'snake';
 // let animal = 'dove';
 
-for (let letter of animal) {
-  console.log(letter);
+let interimResult = '';
+for (const animal of animals) {
+  for (let character of animal) {
+    interimResult = character + interimResult;
+  }
+  console.log(`${animal} ----> ${interimResult}`);
+  interimResult = '';
+  /* console.log(letter); */
 }

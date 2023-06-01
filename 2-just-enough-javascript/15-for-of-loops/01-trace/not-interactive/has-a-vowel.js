@@ -2,8 +2,8 @@
 
 'use strict';
 
-let letters = 'xyz';
-// let letters = 'aeiou';
+///let letters = 'xyz';
+let letters = 'aeiou';
 // let letters = 'zaei';
 // let letters = 'aeiz';
 // let letters = 'xyza';
