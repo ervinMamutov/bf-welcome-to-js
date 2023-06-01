@@ -26,21 +26,36 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input = null;
+while (!input) {
+  input = prompt('enter text');
+  if (input === null) {
+    alert('My friend,  enter again');
+    continue;
+  }
+  if (input === '') {
+    alert('Please, enter again ');
+    continue;
+  }
+}
 console.log('input:', input);
 
 /* --- declare characters to keep --- */
 
-let toKeep = _;
+let toKeep = '1234567890~`!@#$%^&*()-_=+,<.>/?|;:"\' ';
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (let charackter of input) {
+  if (toKeep.indexOf(charackter) === -1) {
+    output += charackter;
+  } else {
+    continue;
+  }
 }
 
 /* --- alert the result --- */
