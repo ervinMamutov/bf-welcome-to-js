@@ -11,7 +11,7 @@ while (input === null) {
 }
 
 let spaceless = '';
-for (let character of input) {
+for (const character of input) {
   if (character !== ' ') {
     spaceless = spaceless + character;
     console.log(spaceless);
