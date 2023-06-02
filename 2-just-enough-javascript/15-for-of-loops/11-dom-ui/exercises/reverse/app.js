@@ -4,13 +4,17 @@ import {
   displayString,
 } from '../../../../../lib/dom-io/index.js';
 
-whenFormDataChanges('___', () => {
+whenFormDataChanges('input', () => {
   // debugger;
-  console.log('--- form data changed ---');
-
   // --- read the user's input ---
+  const input = readString('to-reverse');
+  let toReverse = '';
 
   // --- reverse this ---
+  for (const character of input) {
+    toReverse = character + toReverse;
+  }
 
   // --- display the result ---
+  displayString('output', toReverse);
 });

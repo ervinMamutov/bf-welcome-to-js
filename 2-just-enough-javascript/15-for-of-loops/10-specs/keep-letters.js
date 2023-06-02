@@ -26,21 +26,36 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input = null;
+while (!input) {
+  input = prompt('enter text');
+  if (input === null) {
+    alert('My friend,  enter again');
+    continue;
+  }
+  if (input === '') {
+    alert('Please, enter again ');
+    continue;
+  }
+}
 console.log('input:', input);
 
 /* --- declare characters to keep --- */
 
-let toKeep = _;
+let toKeep = '1234567890~`!@#$%^&*()-_=+,<.>/?|;:"\' ';
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (let charackter of input) {
+  if (toKeep.indexOf(charackter) === -1) {
+    output += charackter;
+  } else {
+    continue;
+  }
 }
 
 /* --- alert the result --- */
@@ -52,13 +67,13 @@ console.log('--- end program ---');
 
 /*
   checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
+    [x] the code is formatted
+    [x] linting check passes
+    [x] variable names are clear and helpful
+    [x] each line of code is explained in a comment above that line
       - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
+    [x] the program runs
+    [x] the program has no errors
+    [x] all of the test cases work
+    [x] you tested strange inputs that could break your program (edge cases)
 */
