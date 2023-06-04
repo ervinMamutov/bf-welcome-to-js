@@ -3,21 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message:  Invalid left-hand side in assignment
 
-  callstack:
+  callstack: 21
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrectly assigned variable
 
-  the fix(es):
+  the fix(es): swap the favoriteNumber and 3
 */
 
 let favoriteNumber = 4;
-3 = favoriteNumber;
 
-
+favoriteNumber = 3;

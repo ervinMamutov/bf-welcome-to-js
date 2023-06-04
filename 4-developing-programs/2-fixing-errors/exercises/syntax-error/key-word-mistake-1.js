@@ -3,22 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message:  Unexpected strict mode reserved word
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: syntax error intstead of if should use for
 
-  the fix(es):
+  the fix(es): change if to for 
 */
 
-if (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   console.log(i);
 }
-
-

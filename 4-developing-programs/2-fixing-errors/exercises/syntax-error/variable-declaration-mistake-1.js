@@ -3,20 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Identifier 'tree' has already been declared
 
-  callstack:
+  callstack: 22
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: double declared variable
 
-  the fix(es):
+  the fix(es): delete second declaration  
 */
 
 let tree = 'oak';
 
-let tree = 'birch';
+tree = 'birch';

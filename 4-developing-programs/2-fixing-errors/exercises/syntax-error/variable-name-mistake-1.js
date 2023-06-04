@@ -4,21 +4,18 @@
 
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected number
 
-  callstack:
+  callstack: 21
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect variable definition and initalisation 
 
-  the fix(es):
+  the fix(es): replace name and value
 */
 
-
-const 3 = 'three';
-
-
+const three = 3;

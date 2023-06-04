@@ -3,25 +3,22 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Illegal break statement
 
-  callstack:
+  callstack: 24
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect use 'break'
 
-  the fix(es):
+  the fix(es): delete 'breake'
 */
 
 const userName = 'wingdoz';
 
 if (userName.length > 3) {
   console.log(userName);
-  break;
 }
-
-

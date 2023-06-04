@@ -3,30 +3,26 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected token '{'
 
-  callstack:
+  callstack: 25
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect use 'else'
 
-  the fix(es):
+  the fix(es): add if
 */
 
 const userName = 'indrogo';
 
 if (userName.length < 3) {
   console.log('too short');
-
-} else (userName.length < 5) {
+} else if (userName.length < 5) {
   console.log('just right');
-
 } else {
   console.log('too long');
 }
-
-

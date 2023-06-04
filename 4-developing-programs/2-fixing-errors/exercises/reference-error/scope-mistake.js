@@ -3,27 +3,29 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: isValidUserName is not defined
 
-  callstack:
+  callstack: 29
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: variable is not defined
 
-  the fix(es):
+  the fix(es): defined varaible
 */
 
 const userName = 'chiobin';
+let isValidUserName;
+
 console.log('userName:', typeof userName, userName);
 
 if (userName.length > 4) {
-  const isValidUserName = true;
+  isValidUserName = true;
 } else {
-  const isValidUserName = false;
+  isValidUserName = false;
 }
 
 console.log('isValidUserName:', typeof isValidUserName, isValidUserName);

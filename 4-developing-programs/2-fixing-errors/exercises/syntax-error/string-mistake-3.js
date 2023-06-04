@@ -3,20 +3,18 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message:  Unexpected string
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake:incorrect use '
 
-  the fix(es):
+  the fix(es): change '' to ""
 */
 
-const quotesInQuotes = 'remind yourself ''i can do this!'' at least once a day';
-
-
+const quotesInQuotes = 'remind yourself "i can do this!" at last once a day';

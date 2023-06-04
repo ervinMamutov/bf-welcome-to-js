@@ -2,26 +2,24 @@
 
 'use strict';
 
-
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected token '}'
 
-  callstack:
+  callstack: 25
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: extra curly braces
 
-  the fix(es):
+  the fix(es): delete extra closing curly braces 
+
 */
 
+for (let i = 0; i < 5; i++) { 
 
-
-for (let i = 0; i < 5; i++) { }
-console.log(i);
+  console.log(i);
+  
 }
-
-

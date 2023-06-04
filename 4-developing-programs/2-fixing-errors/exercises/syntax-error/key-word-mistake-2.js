@@ -3,22 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected token 'for'
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect use 'for'
 
-  the fix(es):
+  the fix(es): delete 'const' and '='
 */
 
-const for = (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   console.log(i);
 }
-
-

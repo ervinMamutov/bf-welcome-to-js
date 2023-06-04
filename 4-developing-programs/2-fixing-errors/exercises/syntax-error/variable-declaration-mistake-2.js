@@ -3,23 +3,23 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Missing initializer in const declaration
 
-  callstack:
+  callstack: 22
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect initialised variable
 
-  the fix(es):
+  the fix(es): replace const to let 
 */
 
 const userName = 'qopiznu';
 
-const path;
+let path;
 
 if (userName.length > 4) {
   path = 'if';
@@ -28,5 +28,3 @@ if (userName.length > 4) {
 }
 
 console.log(path);
-
-

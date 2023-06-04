@@ -9,11 +9,13 @@
 
 */
 
-let likesApples = confirm('do you like apples?');
+const likesApples = confirm('do you like apples?');
 
 let greeting = '';
 if (likesApples) {
-  greeting = 'hello, welcome to my apple garden';
+  greeting += 'hello, welcome to my apple garden';
 } else {
-  greeting = 'hello, welcome to my orange garden';
+  greeting += 'hello, welcome to my orange garden';
 }
+
+alert(greeting);

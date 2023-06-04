@@ -3,20 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: ReferenceError
+  message: welf is not defined
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: execution
 
-  the mistake:
+  the mistake:  welf is not defined
 
-  the fix(es):
+  the fix(es): define variable
 */
 
-welf = 'ingrad';
+const welf = 'ingrad';
 
 console.log(welf);
