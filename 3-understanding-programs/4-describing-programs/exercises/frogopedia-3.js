@@ -1,7 +1,31 @@
-// #todo
-
 'use strict';
 
+/*
+
+4. frogopedia-3
+
+  A user can enter a sentence about frog
+   - given the users cancel they will be prompted again 
+   - given the users input empty space they will be prompted again
+   - given the users input word without 'frog' they will be prompted again
+
+   test cases
+   - given the users cancel
+      no output -> 'that is not something'
+   - given the users input Ok
+      no output -> 'that is not something'
+   - given the users input empty spacev
+      no output -> 'nope, not about frogs.  try again.'
+   - given the users input other than the word frog
+      no output -> 'nope, not about frogs.  try again.'
+   - given the users input one word 'forg'
+      output -> 'i just learned something cool abouts frogs!' -> 'frog'
+   - given the users input two word 'forg frog'
+      output -> 'i just learned something cool abouts frogs!' -> 'forg frog'
+   - given the users input two word: first - frog and second - other 'forg help'
+      output -> 'i just learned something cool abouts frogs!' -> 'forg help' 
+      
+*/
 const animalName = 'frog';
 
 let coolThing = '';
