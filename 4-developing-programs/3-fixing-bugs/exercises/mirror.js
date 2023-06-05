@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* mirror
@@ -16,9 +14,9 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: a
+      EXPECT: 'a|a'
+      ACTUAL: '|a|a'
 
     TRY:
     PREDICT:
@@ -37,7 +35,7 @@ while (text === null) {
 
 let mirrored = '|';
 for (const character of text) {
-  mirrored = mirrored + character + mirrored;
+  mirrored = character + mirrored + character;
 }
 
 alert(mirrored);

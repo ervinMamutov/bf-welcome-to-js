@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* is excited
@@ -18,9 +16,9 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: 'hello'
+      EXPECT: '"hello" is not excited'
+      ACTUAL: " hello" is excited
 
     TRY:
     PREDICT:
@@ -33,19 +31,21 @@
 */
 
 let input = null;
-while (input === null) {
+while (!input) {
   input = prompt(
     'enter some text, the program will check if it has any spaces',
   );
 }
 
-let isExcited = false;
+let isExcited = true;
 for (const char of input) {
-  if (char !== '!') {
+  if (char === '!') {
     isExcited = true;
     break;
+  } else {
+    isExcited = false;
   }
-}
+};
 
 if (isExcited) {
   alert('"' + input + '" is excited');

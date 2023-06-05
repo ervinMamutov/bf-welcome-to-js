@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* longer than 4
@@ -17,9 +15,11 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: abcde
+      EXPECT: abcde
+      ACTUAL:prompt('enter something longer than 4 characters, or "cancel" to leave')
+      press 'cancel' -> the program ends
+
 
     TRY:
     PREDICT:
@@ -35,13 +35,16 @@ let input = '';
 
 let prompting = true;
 while (prompting) {
-  let input = prompt(
+  input = prompt(
     'enter something longer than 4 characters, or "cancel" to leave',
   );
+
   if (input === null) {
     prompting = false;
     input = 'you canceled';
-  } else if (input > 4) {
+  } else if (input <= 4) {
+    prompting = true;
+  } else {
     prompting = false;
   }
 }
