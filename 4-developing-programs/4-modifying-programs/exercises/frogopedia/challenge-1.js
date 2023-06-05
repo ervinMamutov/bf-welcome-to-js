@@ -8,7 +8,7 @@
   you can make this change by modifying only 1 line
 */
 
-const animal = 'frog';
+const animal = 'horse';
 
 let userInput = '';
 let inputIsAboutAnimal = false;
@@ -19,9 +19,7 @@ while (!inputIsAboutAnimal) {
   if (userInput === '' || userInput === null) {
     alert('that is not something');
     continue;
-  }
-
-  if (userInput.toLowerCase().includes(animal)) {
+  } else if (userInput.toLowerCase().includes(animal)) {
     inputIsAboutAnimal = true;
     continue;
   }

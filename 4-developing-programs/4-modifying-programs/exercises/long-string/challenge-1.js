@@ -18,7 +18,7 @@ while (!longEnough) {
 
   if (phrase === null) {
     alert('there is no escape');
-  } else if (phrase.length <= limit) {
+  } else if (phrase.length <= limit * 2) {
     alert('too short');
   } else {
     longEnough = true;

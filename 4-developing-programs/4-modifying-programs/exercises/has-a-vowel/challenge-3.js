@@ -11,10 +11,10 @@
 
 let characters = null;
 while (characters === null) {
-  characters = prompt('enter some characters');
+  characters = prompt('enter several consonants characters to lower case');
 }
 
-const vowels = 'aeiouAEIOU';
+const vowels = 'bcdfghjklmnpqrstvwxyz';
 
 let hasAVowel = false;
 for (const char of characters) {
