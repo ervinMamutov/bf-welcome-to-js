@@ -48,15 +48,20 @@ function newWord(charOne, charTwo, text) {
   let resulteText = '';
   let intermediateResult = text;
   let remainder = '';
+  let findCharOne = 0;
+  let findCharTwo = 0;
+
 
   for (const character of text) {
     let position = intermediateResult.indexOf(character);
     if (character === charOne.slice(0, 1)) {
       resulteText += intermediateResult.slice(0, position) + charOne;
       intermediateResult = intermediateResult.slice(position + 1);
+      findCharOne++;
     } else if (character === charTwo.slice(0, 1)) {
       resulteText += intermediateResult.slice(0, position) + charTwo;
       intermediateResult = intermediateResult.slice(position + 1);
+      findCharTwo++;
     } else {
       remainder = intermediateResult;
     }
@@ -66,7 +71,7 @@ function newWord(charOne, charTwo, text) {
   // in which the characters on the words 
   // have been replaced whith the specified words
   const finalText = resulteText + remainder;
-  return finalText;
+  return alert( ` We gets word ${text} and find \n ${findCharOne} little ${charOne} \n and \n ${findCharTwo} big ${charTwo}. \n\n  and got a new word as a result ${finalText}` );
 }
 
 while (!message) {
@@ -84,5 +89,3 @@ while (!message) {
 }
 
 resulteMessage = newWord(lowetCaseWord, upperCaseWord, message);
-
-alert(message + ' -> ' + resulteMessage);
