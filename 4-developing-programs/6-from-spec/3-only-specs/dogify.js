@@ -43,17 +43,30 @@ const upperCaseWord = 'DOG';
 
 let resulteMessage = '';
 
-function position(char, text) {
-  let resulte = [];
+// The function gets two words and text as parametrs
+function newWord(charOne, charTwo, text) {
+  let resulteText = '';
+  let intermediateResult = text;
+  let remainder = '';
 
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] === char) {
-      resulte.push(i);
+  for (const character of text) {
+    let position = intermediateResult.indexOf(character);
+    if (character === charOne.slice(0, 1)) {
+      resulteText += intermediateResult.slice(0, position) + charOne;
+      intermediateResult = intermediateResult.slice(position + 1);
+    } else if (character === charTwo.slice(0, 1)) {
+      resulteText += intermediateResult.slice(0, position) + charTwo;
+      intermediateResult = intermediateResult.slice(position + 1);
     } else {
-      continue;
+      remainder = intermediateResult;
     }
   }
-  return resulte;
+
+  // The function returns the new tex,
+  // in which the characters on the words 
+  // have been replaced whith the specified words
+  const finalText = resulteText + remainder;
+  return finalText;
 }
 
 while (!message) {
@@ -70,44 +83,6 @@ while (!message) {
   }
 }
 
-const lowetCasePosition = position(lowetCaseWord.slice(0, 1), message);
+resulteMessage = newWord(lowetCaseWord, upperCaseWord, message);
 
-
-let intermediateResult = message;
-let voluePosition = 0;
-let isDogInside = true;
-
-while (isDogInside) {
-  if (lowetCasePosition.length != 0) {
-    voluePosition = lowetCasePosition.pop();
-    resulteMessage +=
-      intermediateResult.slice(0, voluePosition) + lowetCaseWord;
-    intermediateResult = intermediateResult.slice(voluePosition + 1);
-    isDogInside = true;
-  } else {
-    resulteMessage += intermediateResult;
-    isDogInside = false;
-  }
-}
-
-const upperCasePosition = position(upperCaseWord.slice(0, 1), resulteMessage);
-intermediateResult = resulteMessage;
-voluePosition = 0;
-isDogInside = true;
-
-while (isDogInside) {
-  if (upperCasePosition.length != 0) {
-    voluePosition = upperCasePosition.pop();
-    
-    resulteMessage +=
-      intermediateResult.slice(0, voluePosition) + upperCaseWord;
-    intermediateResult = intermediateResult.slice(voluePosition + 1);
-    isDogInside = true;
-  } else {
-    resulteMessage += intermediateResult;
-    isDogInside = false;
-  }
-}
-
-alert(message + ' ' + lowetCasePosition + ' ' + resulteMessage);
-//alert(message + upperCasePosition);
+alert(message + ' -> ' + resulteMessage);
