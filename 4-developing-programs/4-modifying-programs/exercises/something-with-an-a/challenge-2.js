@@ -13,15 +13,15 @@
     tell the user whether their input has "a" or "A"
 */
 
-const userInput = prompt('please enter something with an "a" in it');
+const userInput = prompt('please enter something with an "a" or "A" in it');
 
 let reaction;
 if (userInput === null || userInput === '') {
   reaction = 'nothing!  why !!! ??? !!!';
-} else if (userInput.includes('a')) {
+} else if (userInput.includes('a') || userInput.includes('A') ) {
   reaction = '"' + userInput + '" is perfect!';
 } else {
-  reaction = '"' + userInput + '" has no "a" in it';
+  reaction = '"' + userInput + '" has no "a" and has no "A" in it';
 }
 
 alert(reaction);

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* has a vowel
@@ -18,9 +16,9 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: 'xyz'
+      EXPECT: '"xyz" has no vowels'
+      ACTUAL: '"xyz" has at least one vowel
 
     TRY:
     PREDICT:
@@ -33,16 +31,18 @@
 */
 
 let characters = null;
-while (characters === null) {
+
+while (!characters) {
   characters = prompt('enter some characters');
 }
 
 const vowels = 'aeiouAEIOU';
 
-let hasAVowel = true;
+let hasAVowel = false;
+
 for (const char of characters) {
   if (vowels.includes(char)) {
-    hasAVowel = false;
+    hasAVowel = true;
     break;
   }
 }

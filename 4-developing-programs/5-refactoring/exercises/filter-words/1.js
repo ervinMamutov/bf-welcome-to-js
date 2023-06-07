@@ -20,10 +20,13 @@ while (!isValid) {
   sentence = sentence.trim();
   if (sentence.length < 3) {
     alert('"' + sentence + '" is too short to have two words');
+    continue;
   } else if (!sentence.includes(' ')) {
     alert('there is only one word');
+    continue;
   } else {
     isValid = true;
+    break;
   }
 }
 

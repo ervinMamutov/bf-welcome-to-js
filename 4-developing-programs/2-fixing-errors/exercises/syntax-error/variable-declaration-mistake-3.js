@@ -3,20 +3,18 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected token '='
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: not available variable name
 
-  the fix(es):
+  the fix(es): add variable name
 */
 
-const = 'always be learning';
-
-
+const action = 'always be learning';

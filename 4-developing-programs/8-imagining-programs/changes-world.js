@@ -1,45 +1,23 @@
-// #todo
-
 'use strict';
 
-/* Dogify
+/* 
 
-  A user can input some text and all "d"s will be replaced with "dog".
-    - given the user cancels:
-        they are prompted again
-    - given their input has any lower case "d"s:
-        all "d"s are replaced with "dog"
-    - given their input has any upper case "D"s:
-        all "D"s are replaced with "DOG"
-    - given their input has any upper & lower case "d"s:
-        all "d"s are replaced with "dog"
-        and all "D"s are replaced with "DOG"
+title: changes-word.js
+
+  description: this programe changes the words in the text according to the given conditions
+
+  user story + acceptance criteria: the user enters text and it changes from letters to words
 
   test cases:
-    contains no "d"s:
-      ' '           ->   ' '
-      'abc'         ->   'abc'
-      'market'      ->   'market'
-    contains lower case "d"s:
-      'd'           ->  'dog'
-      'toad'        ->  'toadog'
-      'disk'        ->  'dogisk'
-      'Iddam'       ->  'Idogdogam'
-    contains upper case "d"s:
-      'D'           ->  'DOG'
-      'ToaD'        ->  'ToaDOG'
-      'Disk'        ->  'DOGisk'
-      'iDDam'       ->  'iDOGDOGam'
-    contains both upper and lower "d"s:
-      'dD'          ->  'dogDOG'
-      'Do dump'     ->  'DOGo dogump'
-      'dim mooD'    -> 'dogim mooDOG'
+  'horSe' -> We gets word 'horSe' and  find  1 little 'horse' and  1 big 'SHEEP' and got a new word as a result 'horseorSHEEPe'
+
 */
+
 
 let message = null;
 
-const lowetCaseWord = 'dog';
-const upperCaseWord = 'DOG';
+const lowetCaseWord = 'horse';
+const upperCaseWord = 'SHEEP';
 
 let resulteMessage = '';
 
@@ -71,7 +49,7 @@ function newWord(charOne, charTwo, text) {
   // in which the characters on the words 
   // have been replaced whith the specified words
   const finalText = resulteText + remainder;
-  return alert( ` We gets word ${text} and find \n ${findCharOne} little ${charOne} \n and \n ${findCharTwo} big ${charTwo}. \n\n  and got a new word as a result ${finalText}` );
+  return alert( ` We gets word ${text} and \nfind \n ${findCharOne} little ${charOne} \n and \n ${findCharTwo} big ${charTwo}. \n\n  and got a new word as a result ${finalText}` );
 }
 
 while (!message) {

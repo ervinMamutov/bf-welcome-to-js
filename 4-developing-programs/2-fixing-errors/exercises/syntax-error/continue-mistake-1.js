@@ -3,25 +3,22 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Illegal continue statement: no surrounding iteration statement
 
-  callstack:
+  callstack: 24
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect use 'continue'
 
-  the fix(es):
+  the fix(es): delete 'continue'
 */
 
 const userName = 'wingdoz';
 
 if (userName.length > 3) {
   console.log(userName);
-  continue;
 }
-
-

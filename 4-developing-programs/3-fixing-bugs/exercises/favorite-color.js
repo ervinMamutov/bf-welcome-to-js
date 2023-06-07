@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* favorite color
@@ -16,9 +14,9 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: JavaScript
+      EXPECT: 'you entered "JavaScript"'
+      ACTUAL: 'you entered'
 
     TRY:
     PREDICT:
@@ -30,15 +28,17 @@
 
 */
 
-let message = 'you entered "';
+let message = 'you entered';
+let input = null;
 
-while (true) {
-  const input = prompt('enter something');
+while (!input) {
+  input = prompt('enter something');
 
-  if (input === null && input.length === 0) {
-    message = input + '"';
-    break;
+  if (input === '') {
+    continue;
   }
 }
+
+message = `${message} "${input}"`;
 
 alert(message);

@@ -10,9 +10,10 @@
 
 */
 
-let time = 'Future';
-let space = 'future';
+const time = 'Future';
+const space = 'future';
 
-let timeIsSpace = time == space;
+let timeIsSpace = time;
+timeIsSpace = space;
 
 console.log(timeIsSpace);

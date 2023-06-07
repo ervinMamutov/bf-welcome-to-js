@@ -3,20 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: Cannot access 'tomatoes' before initialization
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: execution
 
-  the mistake:
+  the mistake: read variable before definition and initalisation 
 
-  the fix(es):
+  the fix(es): definition and initrialisation early
 */
 
-console.log(tomatoes);
+const tomatoes = 'fresh';
 
-let tomatoes = 'fresh';
+console.log(tomatoes);

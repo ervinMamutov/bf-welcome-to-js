@@ -2,27 +2,21 @@
 
 'use strict';
 
-
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected end of input
 
-  callstack:
+  callstack: 29
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: no closing curly braces
 
-  the fix(es):
+  the fix(es): add clissing curly braces
 */
-
-
 
 for (let i = 0; i < 5; i++) {
   console.log(i);
-
-
-
-
+}

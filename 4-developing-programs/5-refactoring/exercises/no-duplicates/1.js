@@ -8,6 +8,9 @@
 */
 
 let mayHaveDuplicates = null;
+const finalMessage = 'well done!';
+const conditionalStatement = 'too bad, try again';
+
 while (mayHaveDuplicates === null) {
   mayHaveDuplicates = prompt('enter something with no duplicate characters');
 }
@@ -21,8 +24,8 @@ for (let char of mayHaveDuplicates) {
   hasNoDuplicates = hasNoDuplicates + char;
 }
 
-if (hasNoDuplicates.length === mayHaveDuplicates.length) {
-  alert('well done!');
+if (hasNoDuplicates.length !== mayHaveDuplicates.length) {
+  alert(conditionalStatement);
 } else {
-  alert('too bad, try again');
+  alert(finalMessage);
 }

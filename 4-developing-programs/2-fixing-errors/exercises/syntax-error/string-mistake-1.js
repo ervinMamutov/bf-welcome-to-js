@@ -3,21 +3,18 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome 
 
-  name:
-  message:
+  name: SyntaxError
+  message: Invalid or unexpected token
 
-  callstack:
+  callstack: 20
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: incorrect use '\n'
 
-  the fix(es):
+  the fix(es): delete '\n'
 */
 
-const a = 'this is
-two lines';
-
-
+const a = 'this is two lines';

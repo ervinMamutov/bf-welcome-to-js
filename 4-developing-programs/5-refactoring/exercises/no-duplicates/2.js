@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -10,22 +8,36 @@
 
 */
 
-let mayHaveDuplicates = null;
-while (mayHaveDuplicates === null) {
-  mayHaveDuplicates = prompt('enter something with no duplicate characters');
-}
+let mayHaveDuplicates = '';
+let duplicateDetecter = null;
+let result = '';
 
-let hasNoDuplicates = '';
-for (let char of mayHaveDuplicates) {
-  let isDuplicate = hasNoDuplicates.includes(char);
-  if (isDuplicate) {
+const cheakDuplicates = (text) => {
+  let result = '';
+
+  if (text !== null) {
+    for (const characters of text) {
+      if (!result.includes(characters)) {
+        result += characters;
+      } else {
+        result = '';
+        return result;
+      }
+    }
+  } else {
+    result = '';
+    return result;
+  }
+  return result;
+};
+
+while (cheakDuplicates) {
+  mayHaveDuplicates = prompt('enter something with no duplicate characters');
+  result = cheakDuplicates(mayHaveDuplicates);
+  if (result) {
     break;
   }
-  hasNoDuplicates = hasNoDuplicates + char;
+  alert('try again');
 }
 
-if (hasNoDuplicates.length === mayHaveDuplicates.length) {
-  alert('well done!');
-} else {
-  alert('too bad, try again');
-}
+alert('well done! ' + result);

@@ -10,10 +10,10 @@
 
 let characters = null;
 while (characters === null) {
-  characters = prompt('enter some characters');
+  characters = prompt('enter some characters to upper-case vowels');
 }
 
-const vowels = 'aeiouAEIOU';
+const vowels = 'AEIOU';
 
 let hasAVowel = false;
 for (const char of characters) {

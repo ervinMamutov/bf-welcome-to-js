@@ -3,22 +3,20 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message:  Unexpected identifier 'anchorName'
 
-  callstack:
+  callstack: 22
 
-  life cycle:
+  life cycle: exeption
 
-  the mistake:
+  the mistake: wrong assignment
 
-  the fix(es):
+  the fix(es): add + 
 */
 
 const anchorName = '#Home';
 
-const innerHtml = "<p>Click here to <a href="anchorName">go home</a></p>";
-
-
+const innerHtml = '<p>Click here to <a href=' + anchorName + '>go home</a></p>';
