@@ -1,6 +1,25 @@
-// #todo
-
 'use strict';
+
+/*
+
+13. remembery-2.js
+
+  The first player enters a tree phrase.
+  The second player has three chances to guesse all it.
+  
+  test cases
+   - given the users input when prompted to:
+      output -> 'Player 1, enter your first secret:' -> 'sun' -> 
+      'Player 1, enter your second secret:' -> 'moon' ->
+      'Player 1, enter your third secret:' -> 'sky'
+      'Player 1, guess the first secret:' -> 'sun'
+      'Player 1, guess the second secret:' -> 'moon'
+      'Player 1, guess the third secret:' -> 'sky'
+
+      -> your score: 3
+
+   
+*/
 
 alert(`Guess 3 secrets in 3 tries
 
