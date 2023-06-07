@@ -1,6 +1,25 @@
-// #todo
-
 'use strict';
+
+/*
+
+12. remembery-1.js
+
+  The first player enters a phrase.
+  The second player has three chances to guesse it.
+  
+  test cases
+   - given the users cancel when prompted 
+      output -> 'Player 1, enter your first phrase:' -> cancel ->  'your points: 3 '
+   - given the users input Ok when prompted
+      output -> 'your points: 3 '
+   - given the users input when prompted to enter 'hello world'
+      output -> 'Player 1, enter your first guess:' -> 'hello country' ->
+      'Player 1, enter your second guess:' -> 'hello city' 
+      'Player 1, enter your third guess: ' -> 'hello world' ->
+      your points: 1
+   
+*/
+
 
 alert(`Guess a phrase in 3 tries
 
