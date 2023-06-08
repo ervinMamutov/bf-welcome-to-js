@@ -1,3 +1,4 @@
+'use strict';
 // these are the only functions you will need
 import {
   whenFormDataChanges,
@@ -10,12 +11,13 @@ whenFormDataChanges('user-data', () => {
   console.log('\n--- form data changed ---');
 
   // --- read user input ---
-  let firstName = readString('fn');
-  let lastName = readString('ln');
+  const firstName = readString('fn');
+  const lastName = readString('ln');
 
   // --- create a message ---
-  let message = 'Hello, I think, my name is ' + firstName + ' ' + lastName;
+  const message = `Hello, my name is ${firstName} ${lastName}.`;
 
   // --- display the message ---
-  displayString('secret-solution', message);
+
+  displayString('greet-field', message);
 });

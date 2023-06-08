@@ -2,13 +2,15 @@
 
 let number = 1;
 
-__;
+const NONAME = 'Sleep';
 
-__;
-__;
+const repeat = (number) => {
+  return number*number;
+};
+let output = repeat(12);
 
-__;
-__;
+let isNumberInside = false;
+const text = 'hello';
 
-__;
-__;
+let d = repeat(number+10);
+let input = prompt('hello');

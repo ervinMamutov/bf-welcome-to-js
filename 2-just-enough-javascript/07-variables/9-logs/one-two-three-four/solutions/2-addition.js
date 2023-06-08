@@ -2,14 +2,14 @@
 
 let number = 0;
 
-__;
-__;
+let string = 'free';
+let boolean = true;
 
-__;
-__;
+const booleanConst = false;
+const stringConst = 'hello';
 
-__;
-__;
+const num = 123312;
+let input = prompt(string);
 
-__;
-__;
+let view = alert(num);
+let newString = stringConst + string;
