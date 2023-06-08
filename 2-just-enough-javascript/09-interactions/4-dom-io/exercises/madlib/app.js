@@ -19,7 +19,7 @@ whenFormDataChanges('user-words', () => {
 
   // --- create a funny sentence ---
 
-  let funnySentence = `On this ${adjective} day, ${noun} ${verb} out the window.`;
+  let funnySentence = `On ${adjective} days the, ${noun} will always ${verb}.`;
   /* 'One ' + newAdjective + ' time the ' + newNoun + ' can ' + newVerb; */
 
   // --- display the sentence ---
