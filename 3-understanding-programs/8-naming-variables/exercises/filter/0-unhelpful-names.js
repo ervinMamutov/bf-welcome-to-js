@@ -1,20 +1,8 @@
-// #todo
-
 'use strict';
 
-/*
-  _a:
-    declaration:
-      init:
-      types:
-      scopes:
-    reads:
-      scopes:
-      checks:
-    assignments:
-      types:
-      scopes:
+/* 
 
+  _a -> __:
 
 */
 
@@ -32,3 +20,4 @@ for (let _c of _a) {
 }
 
 alert(_b);
+
